@@ -1,0 +1,3 @@
+[console_scripts]
+proxymity_node = proxymity.sensor_node:main
+
