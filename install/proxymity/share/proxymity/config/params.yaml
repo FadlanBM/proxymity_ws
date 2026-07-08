@@ -10,10 +10,15 @@
 /**:
   ros__parameters:
     # Common
-    sensor_type: "hcsr04"        # "hcsr04" or "l18d80"
+    sensor_type: "l18d80"        # "hcsr04" or "l18d80"
     gpio_chip: "/dev/gpiochip0"
     publish_rate_hz: 10.0
     simulate: false
+    obstacle_threshold_cm: 20.0
+    obstacle_on_delay: 0.0
+    obstacle_off_delay: 0.0
+    oscillation_window: 1.0
+    oscillation_max_toggles: 3
 
     # Range message fields
     frame_id: "proximity_link"
@@ -26,6 +31,6 @@
     echo_pin: 12
 
     # L18D80 (IR obstacle)
-    out_pin: 11
+    out_pin: 144
     active_low: true             # LOW = obstacle for L18D80
 

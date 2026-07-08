@@ -1,0 +1,140 @@
+[0.350s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'proxymity', '--symlink-install'][0m
+[0.350s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['proxymity'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa3ac0c70>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa3c9da80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa3c9da80>>, mixin_verb=('build',))[0m
+[0.844s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.844s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.845s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.845s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.845s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.845s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.846s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/heroes/Workspace/proxymity_ws'
+[0.846s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.846s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.847s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.847s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.847s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.848s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.848s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.848s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.848s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.905s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.906s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.907s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.908s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.909s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.909s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.909s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.910s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.910s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.910s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.911s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.911s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.911s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.912s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.912s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.912s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.912s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.913s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.913s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.913s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.914s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.914s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.914s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extensions ['ignore', 'ignore_ament_install']
+[0.915s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extension 'ignore'
+[0.915s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extension 'ignore_ament_install'
+[0.915s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extensions ['colcon_pkg']
+[0.916s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extension 'colcon_pkg'
+[0.916s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extensions ['colcon_meta']
+[0.916s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extension 'colcon_meta'
+[0.916s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extensions ['ros']
+[0.917s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/proxymity) by extension 'ros'
+[0.923s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/proxymity' with type 'ros.ament_python' and name 'proxymity'[0m
+[0.924s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.924s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.925s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.925s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.925s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.965s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.966s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.976s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 39 installed packages in /home/heroes/microros_ws/install[0m
+[0.980s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 386 installed packages in /opt/ros/humble[0m
+[0.989s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[1.112s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'cmake_args' from command line to 'None'
+[1.112s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'cmake_target' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'cmake_clean_cache' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'cmake_clean_first' from command line to 'False'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'cmake_force_configure' from command line to 'False'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'ament_cmake_args' from command line to 'None'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'catkin_cmake_args' from command line to 'None'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'proxymity' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.115s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'proxymity' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/heroes/Workspace/proxymity_ws/build/proxymity', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/heroes/Workspace/proxymity_ws/install/proxymity', 'merge_install': False, 'path': '/home/heroes/Workspace/proxymity_ws/src/proxymity', 'symlink_install': True, 'test_result_base': None}[0m
+[1.116s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[1.123s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[1.124s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/heroes/Workspace/proxymity_ws/src/proxymity' with build type 'ament_python'
+[1.124s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('proxymity', 'ament_prefix_path')
+[1.131s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.132s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/hook/ament_prefix_path.ps1'
+[1.134s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/hook/ament_prefix_path.dsv'
+[1.136s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/hook/ament_prefix_path.sh'
+[1.139s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.139s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[2.355s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/heroes/Workspace/proxymity_ws/src/proxymity'
+[2.356s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.356s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[3.497s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/share/ament_index/resource_index/packages/proxymity[0m
+[3.498s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/package.xml[0m
+[3.498s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/config/params.yaml[0m
+[3.498s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch/proxymity_launch.py[0m
+[3.498s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch/proxymity_controller_launch.py[0m
+[3.498s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch/green_light_launch.py[0m
+[3.499s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity/green_light_node[0m
+[3.499s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity/proxymity_controller_node[0m
+[3.499s] [34mcolcon.colcon_core.task.python.build[0m [1;30mDEBUG[0m [32mWhile undoing a previous installation files outside the Python library path are being ignored: /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity/proxymity_node[0m
+[3.503s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/heroes/Workspace/proxymity_ws/build/proxymity': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/heroes/Workspace/proxymity_ws/build/proxymity/build --no-deps symlink_data --force[0m
+[4.959s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('proxymity', 'pythonpath_develop')
+[4.960s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/heroes/Workspace/proxymity_ws/build/proxymity/share/proxymity/hook/pythonpath_develop.ps1'
+[4.961s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/heroes/Workspace/proxymity_ws/build/proxymity/share/proxymity/hook/pythonpath_develop.dsv'
+[4.963s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/heroes/Workspace/proxymity_ws/build/proxymity/share/proxymity/hook/pythonpath_develop.sh'
+[4.963s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/heroes/Workspace/proxymity_ws/build/proxymity' returned '0': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/heroes/Workspace/proxymity_ws/build/proxymity/build --no-deps symlink_data --force[0m
+[4.972s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/heroes/Workspace/proxymity_ws/install/proxymity' for CMake module files
+[4.974s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/heroes/Workspace/proxymity_ws/install/proxymity' for CMake config files
+[4.976s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/heroes/Workspace/proxymity_ws/install/proxymity/lib'
+[4.976s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/heroes/Workspace/proxymity_ws/install/proxymity/bin'
+[4.977s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/pkgconfig/proxymity.pc'
+[4.977s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages'
+[4.978s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('proxymity', 'pythonpath')
+[4.979s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/hook/pythonpath.ps1'
+[4.981s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/hook/pythonpath.dsv'
+[4.982s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/hook/pythonpath.sh'
+[4.985s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/heroes/Workspace/proxymity_ws/install/proxymity/bin'
+[4.985s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(proxymity)
+[4.986s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/package.ps1'
+[4.990s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/package.dsv'
+[4.992s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/package.sh'
+[4.995s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/package.bash'
+[4.998s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/package.zsh'
+[5.001s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/heroes/Workspace/proxymity_ws/install/proxymity/share/colcon-core/packages/proxymity)
+[5.004s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[5.005s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[5.005s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[5.006s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[5.021s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.021s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.022s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[5.081s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[5.082s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/heroes/Workspace/proxymity_ws/install/local_setup.ps1'
+[5.085s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/heroes/Workspace/proxymity_ws/install/_local_setup_util_ps1.py'
+[5.090s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/heroes/Workspace/proxymity_ws/install/setup.ps1'
+[5.120s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/heroes/Workspace/proxymity_ws/install/local_setup.sh'
+[5.123s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/heroes/Workspace/proxymity_ws/install/_local_setup_util_sh.py'
+[5.126s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/heroes/Workspace/proxymity_ws/install/setup.sh'
+[5.133s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/heroes/Workspace/proxymity_ws/install/local_setup.bash'
+[5.135s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/heroes/Workspace/proxymity_ws/install/setup.bash'
+[5.143s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/heroes/Workspace/proxymity_ws/install/local_setup.zsh'
+[5.148s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/heroes/Workspace/proxymity_ws/install/setup.zsh'

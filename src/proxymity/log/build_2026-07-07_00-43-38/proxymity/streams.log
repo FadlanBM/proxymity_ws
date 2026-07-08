@@ -1,0 +1,24 @@
+[1.780s] Invoking command in '/home/heroes/Workspace/proxymity_ws/src/proxymity': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/proxymity build --build-base /home/heroes/Workspace/proxymity_ws/build/proxymity/build install --record /home/heroes/Workspace/proxymity_ws/build/proxymity/install.log --single-version-externally-managed install_data
+[2.506s] running egg_info
+[2.507s] writing ../../build/proxymity/proxymity.egg-info/PKG-INFO
+[2.508s] writing dependency_links to ../../build/proxymity/proxymity.egg-info/dependency_links.txt
+[2.508s] writing entry points to ../../build/proxymity/proxymity.egg-info/entry_points.txt
+[2.509s] writing requirements to ../../build/proxymity/proxymity.egg-info/requires.txt
+[2.509s] writing top-level names to ../../build/proxymity/proxymity.egg-info/top_level.txt
+[2.514s] reading manifest file '../../build/proxymity/proxymity.egg-info/SOURCES.txt'
+[2.516s] writing manifest file '../../build/proxymity/proxymity.egg-info/SOURCES.txt'
+[2.517s] running build
+[2.517s] running build_py
+[2.517s] copying proxymity/l18d80_driver.py -> /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity
+[2.517s] running install
+[2.518s] running install_lib
+[2.520s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/l18d80_driver.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[2.522s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/l18d80_driver.py to l18d80_driver.cpython-310.pyc
+[2.524s] running install_data
+[2.524s] running install_egg_info
+[2.529s] removing '/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity-0.1.0-py3.10.egg-info' (and everything under it)
+[2.530s] Copying ../../build/proxymity/proxymity.egg-info to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity-0.1.0-py3.10.egg-info
+[2.533s] running install_scripts
+[2.584s] Installing proxymity_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[2.585s] writing list of installed files to '/home/heroes/Workspace/proxymity_ws/build/proxymity/install.log'
+[2.665s] Invoked command in '/home/heroes/Workspace/proxymity_ws/src/proxymity' returned '0': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/proxymity build --build-base /home/heroes/Workspace/proxymity_ws/build/proxymity/build install --record /home/heroes/Workspace/proxymity_ws/build/proxymity/install.log --single-version-externally-managed install_data

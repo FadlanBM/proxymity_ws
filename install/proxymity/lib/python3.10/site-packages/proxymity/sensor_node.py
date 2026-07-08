@@ -36,6 +36,11 @@ class ProximitySensorNode(Node):
         self.declare_parameter('field_of_view', 0.261799)
         self.declare_parameter('min_range', 0.02)
         self.declare_parameter('max_range', 4.0)
+        self.declare_parameter('obstacle_threshold_cm', 20.0)
+        self.declare_parameter('obstacle_on_delay', 0.0)
+        self.declare_parameter('obstacle_off_delay', 0.0)
+        self.declare_parameter('oscillation_window', 2.0)
+        self.declare_parameter('oscillation_max_toggles', 4)
 
         # ---------- HC-SR04 Parameters ----------
         self.declare_parameter('trigger_pin', 11)
@@ -56,6 +61,11 @@ class ProximitySensorNode(Node):
         self._fov = self.get_parameter('field_of_view').value
         self._min_range = self.get_parameter('min_range').value
         self._max_range = self.get_parameter('max_range').value
+        self._obstacle_threshold_cm = self.get_parameter('obstacle_threshold_cm').value
+        self._obstacle_on_delay = self.get_parameter('obstacle_on_delay').value
+        self._obstacle_off_delay = self.get_parameter('obstacle_off_delay').value
+        self._oscillation_window = self.get_parameter('oscillation_window').value
+        self._oscillation_max_toggles = self.get_parameter('oscillation_max_toggles').value
 
         # ---------- Init driver based on sensor type ----------
         self._sensor_type = sensor_type
@@ -64,11 +74,7 @@ class ProximitySensorNode(Node):
         # ---------- Publishers ----------
         self._pub_range = self.create_publisher(Range, '/proximity/range', 10)
         self._pub_raw = self.create_publisher(Float32, '/proximity/raw', 10)
-
-        if sensor_type == 'l18d80':
-            self._pub_obstacle = self.create_publisher(Bool, '/proximity/obstacle', 10)
-        else:
-            self._pub_obstacle = None
+        self._pub_obstacle = self.create_publisher(Bool, '/proximity/obstacle', 10)
 
         # ---------- Timer ----------
         period = 1.0 / rate
@@ -159,6 +165,13 @@ class ProximitySensorNode(Node):
         distance_cm = self._driver.measure()
         distance_m = distance_cm / 100.0 if distance_cm > 0 else float('inf')
 
+        # Obstacle Bool
+        raw_obstacle = 0.0 < distance_cm <= self._obstacle_threshold_cm
+        obstacle = self._update_obstacle_state(raw_obstacle, now)
+        obs_msg = Bool()
+        obs_msg.data = obstacle
+        self._pub_obstacle.publish(obs_msg)
+
         # Range message
         msg = Range()
         msg.header.stamp = now.to_msg()
@@ -176,13 +189,14 @@ class ProximitySensorNode(Node):
         self._pub_raw.publish(raw_msg)
 
         self.get_logger().debug(
-            f'HC-SR04: {distance_cm:.1f} cm ({distance_m:.2f} m)',
+            f'HC-SR04: {distance_cm:.1f} cm ({distance_m:.2f} m) — obstacle={"YES" if obstacle else "NO"}',
             throttle_duration_sec=1.0,
         )
 
     def _publish_l18d80(self, now) -> None:
         """Publish L18D80 obstacle data."""
-        obstacle = self._driver.is_obstacle_detected()
+        raw_obstacle = self._driver.is_obstacle_detected()
+        obstacle = self._update_obstacle_state(raw_obstacle, now)
 
         # Obstacle Bool
         if self._pub_obstacle:
@@ -210,6 +224,10 @@ class ProximitySensorNode(Node):
             f'L18D80: obstacle={"YES" if obstacle else "NO"}',
             throttle_duration_sec=1.0,
         )
+
+    def _update_obstacle_state(self, raw_obstacle: bool, now) -> bool:
+        """Returns the raw obstacle state directly, bypassing all filters."""
+        return raw_obstacle
 
     def destroy_node(self) -> bool:
         if self._driver:

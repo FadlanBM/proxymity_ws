@@ -1,0 +1,25 @@
+[1.941s] Invoking command in '/home/heroes/Workspace/proxymity_ws/build/proxymity': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/heroes/Workspace/proxymity_ws/build/proxymity/build --no-deps symlink_data --force
+[2.750s] running develop
+[3.247s] running egg_info
+[3.248s] writing proxymity.egg-info/PKG-INFO
+[3.248s] writing dependency_links to proxymity.egg-info/dependency_links.txt
+[3.250s] writing entry points to proxymity.egg-info/entry_points.txt
+[3.250s] writing requirements to proxymity.egg-info/requires.txt
+[3.251s] writing top-level names to proxymity.egg-info/top_level.txt
+[3.256s] reading manifest file 'proxymity.egg-info/SOURCES.txt'
+[3.258s] writing manifest file 'proxymity.egg-info/SOURCES.txt'
+[3.264s] running build_ext
+[3.265s] Creating /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity.egg-link (link to .)
+[3.267s] Installing green_light_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[3.267s] Installing proxymity_controller_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[3.268s] Installing proxymity_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[3.268s] 
+[3.268s] Installed /home/heroes/Workspace/proxymity_ws/build/proxymity
+[3.269s] running symlink_data
+[3.269s] symbolically linking /home/heroes/Workspace/proxymity_ws/build/proxymity/resource/proxymity -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/ament_index/resource_index/packages
+[3.269s] symbolically linking /home/heroes/Workspace/proxymity_ws/build/proxymity/package.xml -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity
+[3.270s] symbolically linking /home/heroes/Workspace/proxymity_ws/build/proxymity/proxymity/config/params.yaml -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/config
+[3.270s] symbolically linking /home/heroes/Workspace/proxymity_ws/build/proxymity/launch/proxymity_launch.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch
+[3.270s] symbolically linking /home/heroes/Workspace/proxymity_ws/build/proxymity/launch/proxymity_controller_launch.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch
+[3.270s] symbolically linking /home/heroes/Workspace/proxymity_ws/build/proxymity/launch/green_light_launch.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch
+[3.392s] Invoked command in '/home/heroes/Workspace/proxymity_ws/build/proxymity' returned '0': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/heroes/Workspace/proxymity_ws/build/proxymity/build --no-deps symlink_data --force

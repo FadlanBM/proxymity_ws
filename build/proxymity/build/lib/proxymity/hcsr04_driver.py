@@ -34,6 +34,12 @@ class HCSR04Driver:
             gpio_chip:    GPIO chip device path (default: /dev/gpiochip0).
             timeout_ms:   Timeout for waiting echo pulse (default: 30ms = ~50cm max).
         """
+        if not HAS_GPIOD:
+            raise ImportError(
+                "Python 'gpiod' bindings not found. "
+                "Install via: pip3 install gpiod"
+            )
+
         self._trigger_line = trigger_line
         self._echo_line = echo_line
         self._timeout_ns = timeout_ms * 1_000_000
@@ -79,28 +85,33 @@ class HCSR04Driver:
             Pulse width in microseconds. Returns 0 on timeout.
         """
         offset = self._echo_line
-        begin_ns = time.monotonic_ns()
+        timeout_sec = self._timeout_ns / 1_000_000_000.0  # Convert nanoseconds to seconds
 
-        # Wait for rising edge
+        # 1. Wait for rising edge
+        if not self._echo.wait_edge_events(timeout=timeout_sec):
+            return 0.0  # Timeout waiting for rising edge
+
+        rising_ns = None
         for event in self._echo.read_edge_events():
             if event.line_offset == offset and event.event_type == gpiod.EdgeEvent.Type.RISING_EDGE:
                 rising_ns = event.timestamp_ns
                 break
-            # Check timeout
-            if time.monotonic_ns() - begin_ns > self._timeout_ns:
-                return 0.0
-        else:
-            return 0.0  # no rising edge
 
-        # Wait for falling edge
+        if rising_ns is None:
+            return 0.0  # Did not get rising edge
+
+        # 2. Wait for falling edge
+        if not self._echo.wait_edge_events(timeout=timeout_sec):
+            return 0.0  # Timeout waiting for falling edge
+
+        falling_ns = None
         for event in self._echo.read_edge_events():
             if event.line_offset == offset and event.event_type == gpiod.EdgeEvent.Type.FALLING_EDGE:
                 falling_ns = event.timestamp_ns
                 break
-            if time.monotonic_ns() - rising_ns > self._timeout_ns:
-                return 0.0
-        else:
-            return 0.0  # no falling edge
+
+        if falling_ns is None:
+            return 0.0  # Did not get falling edge
 
         pulse_width_us = (falling_ns - rising_ns) / 1000.0
         return pulse_width_us

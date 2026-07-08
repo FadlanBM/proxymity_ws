@@ -13,7 +13,7 @@ setup(
         ('share/' + package_name + '/config',
             ['proxymity/config/params.yaml']),
         ('share/' + package_name + '/launch',
-            ['launch/proxymity_launch.py']),
+            ['launch/proxymity_launch.py', 'launch/proxymity_controller_launch.py', 'launch/green_light_launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,6 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             'proxymity_node = proxymity.sensor_node:main',
+            'proxymity_controller_node = proxymity.sensor_controller_node:main',
+            'green_light_node = proxymity.green_light_node:main',
         ],
     },
 )

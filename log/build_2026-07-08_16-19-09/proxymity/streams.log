@@ -1,0 +1,19 @@
+[1.970s] Invoking command in '/home/heroes/Workspace/proxymity_ws/build/proxymity': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/heroes/Workspace/proxymity_ws/build/proxymity/build --no-deps symlink_data
+[2.781s] running develop
+[3.289s] running egg_info
+[3.294s] writing proxymity.egg-info/PKG-INFO
+[3.295s] writing dependency_links to proxymity.egg-info/dependency_links.txt
+[3.295s] writing entry points to proxymity.egg-info/entry_points.txt
+[3.296s] writing requirements to proxymity.egg-info/requires.txt
+[3.296s] writing top-level names to proxymity.egg-info/top_level.txt
+[3.297s] reading manifest file 'proxymity.egg-info/SOURCES.txt'
+[3.297s] writing manifest file 'proxymity.egg-info/SOURCES.txt'
+[3.303s] running build_ext
+[3.303s] Creating /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity.egg-link (link to .)
+[3.307s] Installing green_light_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[3.308s] Installing proxymity_controller_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[3.308s] Installing proxymity_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[3.308s] 
+[3.309s] Installed /home/heroes/Workspace/proxymity_ws/build/proxymity
+[3.309s] running symlink_data
+[3.425s] Invoked command in '/home/heroes/Workspace/proxymity_ws/build/proxymity' returned '0': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/heroes/Workspace/proxymity_ws/build/proxymity/build --no-deps symlink_data

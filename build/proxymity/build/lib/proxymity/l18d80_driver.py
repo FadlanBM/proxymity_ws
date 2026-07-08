@@ -36,16 +36,23 @@ class L18D80Driver:
             active_low: If True, LOW means obstacle detected (L18D80 default).
                         If False, HIGH means obstacle detected.
         """
+        if not HAS_GPIOD:
+            raise ImportError(
+                "Python 'gpiod' bindings not found. "
+                "Install via: pip3 install gpiod"
+            )
+
         self._out_pin = out_pin
         self._active_low = active_low
         self._chip = gpiod.Chip(gpio_chip)
 
-        # Request OUT pin as input
+        # Request OUT pin as input with Pull-Up Bias to prevent floating noise
         self._out = self._chip.request_lines(
             consumer='proxymity_l18d80',
             config={
                 out_pin: gpiod.LineSettings(
                     direction=gpiod.line.Direction.INPUT,
+                    bias=gpiod.line.Bias.PULL_UP,
                 ),
             },
         )

@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/proxymity/proxymity.egg-info/PKG-INFO
+writing dependency_links to ../../build/proxymity/proxymity.egg-info/dependency_links.txt
+writing entry points to ../../build/proxymity/proxymity.egg-info/entry_points.txt
+writing requirements to ../../build/proxymity/proxymity.egg-info/requires.txt
+writing top-level names to ../../build/proxymity/proxymity.egg-info/top_level.txt
+reading manifest file '../../build/proxymity/proxymity.egg-info/SOURCES.txt'
+writing manifest file '../../build/proxymity/proxymity.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/proxymity_controller_launch.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch
+running install_egg_info
+removing '/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity-0.1.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/proxymity/proxymity.egg-info to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity-0.1.0-py3.10.egg-info
+running install_scripts
+Installing proxymity_controller_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+Installing proxymity_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+writing list of installed files to '/home/heroes/Workspace/proxymity_ws/build/proxymity/install.log'

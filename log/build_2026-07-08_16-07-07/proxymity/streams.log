@@ -1,0 +1,50 @@
+[1.905s] Invoking command in '/home/heroes/Workspace/proxymity_ws/build/proxymity': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/heroes/Workspace/proxymity_ws/build/proxymity/build
+[2.614s] running develop
+[3.111s] Removing /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity.egg-link (link to .)
+[3.221s] Invoked command in '/home/heroes/Workspace/proxymity_ws/build/proxymity' returned '0': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/heroes/Workspace/proxymity_ws/build/proxymity/build
+[3.223s] Invoking command in '/home/heroes/Workspace/proxymity_ws/src/proxymity': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/proxymity build --build-base /home/heroes/Workspace/proxymity_ws/build/proxymity/build install --record /home/heroes/Workspace/proxymity_ws/build/proxymity/install.log --single-version-externally-managed install_data --force
+[3.897s] running egg_info
+[3.899s] writing ../../build/proxymity/proxymity.egg-info/PKG-INFO
+[3.900s] writing dependency_links to ../../build/proxymity/proxymity.egg-info/dependency_links.txt
+[3.901s] writing entry points to ../../build/proxymity/proxymity.egg-info/entry_points.txt
+[3.902s] writing requirements to ../../build/proxymity/proxymity.egg-info/requires.txt
+[3.902s] writing top-level names to ../../build/proxymity/proxymity.egg-info/top_level.txt
+[3.906s] reading manifest file '../../build/proxymity/proxymity.egg-info/SOURCES.txt'
+[3.908s] writing manifest file '../../build/proxymity/proxymity.egg-info/SOURCES.txt'
+[3.908s] running build
+[3.909s] running build_py
+[3.910s] copying proxymity/sensor_controller_node.py -> /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity
+[3.910s] running install
+[3.911s] running install_lib
+[3.913s] creating /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.914s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/__init__.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.914s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/sensor_controller_node.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.914s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/hcsr04_driver.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.914s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/sensor_node.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.915s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/green_light_node.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.915s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/green_light_detector.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.915s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/jetson_utils.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.915s] copying /home/heroes/Workspace/proxymity_ws/build/proxymity/build/lib/proxymity/l18d80_driver.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity
+[3.918s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/__init__.py to __init__.cpython-310.pyc
+[3.918s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/sensor_controller_node.py to sensor_controller_node.cpython-310.pyc
+[3.922s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/hcsr04_driver.py to hcsr04_driver.cpython-310.pyc
+[3.924s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/sensor_node.py to sensor_node.cpython-310.pyc
+[3.927s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/green_light_node.py to green_light_node.cpython-310.pyc
+[3.933s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/green_light_detector.py to green_light_detector.cpython-310.pyc
+[3.935s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/jetson_utils.py to jetson_utils.cpython-310.pyc
+[3.936s] byte-compiling /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity/l18d80_driver.py to l18d80_driver.cpython-310.pyc
+[3.938s] running install_data
+[3.938s] copying resource/proxymity -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/ament_index/resource_index/packages
+[3.938s] copying package.xml -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity
+[3.939s] copying proxymity/config/params.yaml -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/config
+[3.939s] copying launch/proxymity_launch.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch
+[3.939s] copying launch/proxymity_controller_launch.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch
+[3.939s] copying launch/green_light_launch.py -> /home/heroes/Workspace/proxymity_ws/install/proxymity/share/proxymity/launch
+[3.940s] running install_egg_info
+[3.945s] Copying ../../build/proxymity/proxymity.egg-info to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages/proxymity-0.1.0-py3.10.egg-info
+[3.947s] running install_scripts
+[4.004s] Installing green_light_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[4.005s] Installing proxymity_controller_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[4.005s] Installing proxymity_node script to /home/heroes/Workspace/proxymity_ws/install/proxymity/lib/proxymity
+[4.006s] writing list of installed files to '/home/heroes/Workspace/proxymity_ws/build/proxymity/install.log'
+[4.098s] Invoked command in '/home/heroes/Workspace/proxymity_ws/src/proxymity' returned '0': PYTHONPATH=/home/heroes/Workspace/proxymity_ws/build/proxymity/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/heroes/Workspace/proxymity_ws/install/proxymity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/proxymity build --build-base /home/heroes/Workspace/proxymity_ws/build/proxymity/build install --record /home/heroes/Workspace/proxymity_ws/build/proxymity/install.log --single-version-externally-managed install_data --force
