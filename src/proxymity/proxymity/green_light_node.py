@@ -68,6 +68,9 @@ class GreenLightNode(Node):
         self.declare_parameter('timer_period_sec', 0.05)
         self.declare_parameter('show_debug_window', not self.on_jetson, descriptor=bool_desc)
         self.declare_parameter('debug_area', 'GREEN_LIGHT')
+        # When False (default), detection stays idle until the FSM sends a
+        # start trigger on /fsm/area_command. Set True for standalone/debug use.
+        self.declare_parameter('auto_start', False, descriptor=bool_desc)
 
         # ---------- resolve values ----------
         self.serial_port_str = self.get_parameter('serial_port').value
@@ -91,6 +94,7 @@ class GreenLightNode(Node):
         timer_period = float(self.get_parameter('timer_period_sec').value)
         self.show_debug_window = self._get_bool_param('show_debug_window')
         self.debug_area = self.get_parameter('debug_area').value
+        self.auto_start = self._get_bool_param('auto_start')
 
         # ---------- detector ----------
         self.detector = GreenLightDetector(
@@ -143,9 +147,18 @@ class GreenLightNode(Node):
 
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.get_logger().info('Green light detection node initialized successfully.')
-        
-        # Start detection immediately, camera is always on
-        self._start_detection()
+
+        # Detection is GATED by default: it stays idle until the FSM sends a
+        # start trigger on /fsm/area_command (see _on_area_command). This keeps
+        # green detection from locking on before the robot has rotated. Set the
+        # 'auto_start' parameter True to detect immediately (standalone/debug).
+        if self.auto_start:
+            self.get_logger().info('auto_start=True → beginning green detection immediately.')
+            self._start_detection()
+        else:
+            self.get_logger().info(
+                'Green detection GATED — waiting for /fsm/area_command start trigger.'
+            )
 
     def _get_bool_param(self, name):
         val = self.get_parameter(name).value
