@@ -38,7 +38,7 @@ class ProximityControllerNode(Node):
 
         # Relative move distance parameters
         self.declare_parameter('initial_relative_y', -0.5)
-        self.declare_parameter('forward_relative_x', -3.0)
+        self.declare_parameter('forward_relative_x', -1.5)
         self.declare_parameter('forward_duration', 2.0)
         self.declare_parameter('y_move_interval', 0.5)
 

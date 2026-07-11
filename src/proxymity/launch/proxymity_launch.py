@@ -45,7 +45,7 @@ def generate_launch_description():
                               description='FSM command code to send when sensor returns True'),
         DeclareLaunchArgument('initial_relative_y', default_value='-0.5',
                               description='Relative Y move when sensor is clear (strafing)'),
-        DeclareLaunchArgument('forward_relative_x', default_value='-0.5',
+        DeclareLaunchArgument('forward_relative_x', default_value='-1.5',
                               description='Relative X move when sensor detects an obstacle'),
         DeclareLaunchArgument('forward_duration', default_value='3.0',
                               description='Duration in seconds to send forward relative move command'),
