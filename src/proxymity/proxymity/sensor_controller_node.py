@@ -247,13 +247,7 @@ class ProximityControllerNode(Node):
             elapsed = (now - self.forward_start_time).nanoseconds / 1e9
 
             if elapsed >= self.forward_duration:
-                self.get_logger().info("Forward/backward command duration completed. Publishing FSM command and shutting down.")
-                # Send stop command to ensure we are stopped
-                stop_msg = Vector3()
-                stop_msg.x = 0.0
-                stop_msg.y = 0.0
-                stop_msg.z = 0.0
-                self.relative_move_pub.publish(stop_msg)
+                self.get_logger().info("Forward command duration completed. Publishing FSM command and shutting down.")
 
                 # Publish FSM command
                 fsm_msg = Int32()
