@@ -52,7 +52,7 @@ class L18D80Driver:
             config={
                 out_pin: gpiod.LineSettings(
                     direction=gpiod.line.Direction.INPUT,
-                    bias=gpiod.line.Bias.PULL_UP,
+                    # bias=gpiod.line.Bias.PULL_UP,
                 ),
             },
         )

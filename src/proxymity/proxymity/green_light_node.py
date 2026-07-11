@@ -22,7 +22,7 @@ import rclpy
 import serial
 from rclpy.node import Node
 from rcl_interfaces.msg import ParameterDescriptor
-from std_msgs.msg import String
+from std_msgs.msg import String, Int32
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 from rclpy.qos import qos_profile_sensor_data
@@ -53,17 +53,17 @@ class GreenLightNode(Node):
         self.declare_parameter('color_topic', '/camera/camera/color/image_raw')
 
         # HSV thresholds for green
-        self.declare_parameter('hue_low', 40)
-        self.declare_parameter('hue_high', 80)
-        self.declare_parameter('sat_low', 50)
+        self.declare_parameter('hue_low', 50)           # Narrowed from 40 to ignore yellow-green noise
+        self.declare_parameter('hue_high', 75)          # Narrowed from 80 to ignore blue-green noise
+        self.declare_parameter('sat_low', 150)          # Increased from 50 to 150 to require pure green
         self.declare_parameter('sat_high', 255)
-        self.declare_parameter('val_low', 200)          # high — only truly bright light
+        self.declare_parameter('val_low', 225)          # Increased from 200 to 225 to require extreme brightness
         self.declare_parameter('val_high', 255)
 
         # Detection tuning
-        self.declare_parameter('min_area', 3)           # min contour area (px)
+        self.declare_parameter('min_area', 5)           # Increased from 3 to 5 px minimum area
         self.declare_parameter('kernel_size', 3)        # morphology kernel
-        self.declare_parameter('confidence_frames', 5)   # consecutive frames needed
+        self.declare_parameter('confidence_frames', 15)  # Increased from 5 to 15 (half second at 30fps)
         self.declare_parameter('max_missed_frames', 10)  # reset if lost for this many
         self.declare_parameter('timer_period_sec', 0.05)
         self.declare_parameter('show_debug_window', not self.on_jetson, descriptor=bool_desc)
@@ -124,6 +124,7 @@ class GreenLightNode(Node):
         self.create_subscription(String, '/fsm/area_command', self._on_area_command, 10)
         self.fsm_signal_pub = self.create_publisher(String, '/fsm/signal', 10)
         self.area_status_pub = self.create_publisher(String, '/fsm/area_status', 10)
+        self.fsm_command_pub = self.create_publisher(Int32, '/fsm_command', 10)
 
         # ---------- Camera / Topic Subscription setup ----------
         if self.use_realsense:
@@ -142,6 +143,9 @@ class GreenLightNode(Node):
 
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.get_logger().info('Green light detection node initialized successfully.')
+        
+        # Start detection immediately, camera is always on
+        self._start_detection()
 
     def _get_bool_param(self, name):
         val = self.get_parameter(name).value
@@ -316,9 +320,11 @@ class GreenLightNode(Node):
             if self.consecutive_green >= self.confidence_frames:
                 self.get_logger().info(
                     f'Green light detected for {self.consecutive_green} frames — '
-                    'triggering gripper open!'
+                    'publishing 40 to /fsm_command!'
                 )
-                self.send_cmd('O')          # open gripper
+                fsm_msg = Int32()
+                fsm_msg.data = 40
+                self.fsm_command_pub.publish(fsm_msg)
                 self.green_locked = True
                 self.is_detecting = False
                 if not self.use_realsense:

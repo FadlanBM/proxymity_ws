@@ -27,9 +27,9 @@ class ProximitySensorNode(Node):
         super().__init__('proximity_sensor_node')
 
         # ---------- Common Parameters ----------
-        self.declare_parameter('sensor_type', 'hcsr04')
+        self.declare_parameter('sensor_type', 'l18d80')
         self.declare_parameter('gpio_chip', '/dev/gpiochip0')
-        self.declare_parameter('publish_rate_hz', 10.0)
+        self.declare_parameter('publish_rate_hz', 30.0)
         self.declare_parameter('simulate', False)
         self.declare_parameter('frame_id', 'proximity_link')
         self.declare_parameter('radiation_type', Range.ULTRASOUND)
@@ -41,13 +41,14 @@ class ProximitySensorNode(Node):
         self.declare_parameter('obstacle_off_delay', 0.0)
         self.declare_parameter('oscillation_window', 2.0)
         self.declare_parameter('oscillation_max_toggles', 4)
+        self.declare_parameter('obstacle_confirm_count', 7)
 
         # ---------- HC-SR04 Parameters ----------
         self.declare_parameter('trigger_pin', 11)
         self.declare_parameter('echo_pin', 12)
 
         # ---------- L18D80 Parameters ----------
-        self.declare_parameter('out_pin', 11)
+        self.declare_parameter('out_pin', 144)
         self.declare_parameter('active_low', True)
 
         sensor_type = self.get_parameter('sensor_type').value
@@ -66,6 +67,11 @@ class ProximitySensorNode(Node):
         self._obstacle_off_delay = self.get_parameter('obstacle_off_delay').value
         self._oscillation_window = self.get_parameter('oscillation_window').value
         self._oscillation_max_toggles = self.get_parameter('oscillation_max_toggles').value
+        self._obstacle_confirm_count = self.get_parameter('obstacle_confirm_count').value
+
+        # ---------- Obstacle state filtering (consecutive-sample debounce) ----------
+        self._confirmed_state = False
+        self._true_streak = 0
 
         # ---------- Init driver based on sensor type ----------
         self._sensor_type = sensor_type
@@ -226,8 +232,19 @@ class ProximitySensorNode(Node):
         )
 
     def _update_obstacle_state(self, raw_obstacle: bool, now) -> bool:
-        """Returns the raw obstacle state directly, bypassing all filters."""
-        return raw_obstacle
+        """
+        Require obstacle_confirm_count consecutive True raw reads before
+        reporting True. Any False read immediately resets to False.
+        """
+        if raw_obstacle:
+            self._true_streak += 1
+            if self._true_streak >= self._obstacle_confirm_count:
+                self._confirmed_state = True
+        else:
+            self._true_streak = 0
+            self._confirmed_state = False
+
+        return self._confirmed_state
 
     def destroy_node(self) -> bool:
         if self._driver:
@@ -249,4 +266,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
